@@ -1,24 +1,27 @@
 <!doctype html>
 <html>
     <head>
-        <script type="text/javascript" src="products.json"></script>
-             <script type="text/javascript" >
-                function load() {
-                     var mydata = JSON.parse(data);
-                     alert(mydata.length);
-
-                     var div = document.getElementById('data');
-
-                     for(var i = 0;i < mydata.length; i++)
-                     {
-                        div.innerHTML = div.innerHTML + "<p class='inner' id="+i+">"+ mydata[i].name +"</p>" + "<br>";
-                     }
-                 }
-        </script>
+        <title>Kosarica</title>
+        <link href="cart.css" rel="stylesheet" />
+        
     </head>
-    <body onload="load()">
-    <div id= "data">
+    <body>
+        <div id= 'root'>
+            <div class='container'></div>
+        </div>
+        <script src="cart.js"></script>
 
-    </div>
+        <div class="shopping-cart">
+                <div class="shopping-cart-head">
+                  <span class="product-quantity">0</span> Product(s) in Cart
+                </div>
+                <ul class="shopping-cart-list">
+                </ul>
+                <div class="cart-buttons">
+                  <a href="#0" class="button empty-cart-btn">Empty</a>
+                  <a href="#0" class="button cart-checkout">Checkout - <span class="total-price">$0</span></a>
+                </div>
+              </div>
+            </div><!-- container -->
     </body>
 </html>
