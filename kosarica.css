@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Dosis', sans-serif;
+    line-height: 1.6;
+    color: #666;
+    background: #F6F6F6;
+}
+
+#root {
+    max-width: 1050px;
+    margin: 1;
+}
+
+p {
+    padding: 0 2.5rem 2.5rem;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 1rem;
+    background: white;
+    box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all .2s linear;
+}
+
+.card:hover {
+    box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
+    transform: translate3D(0, -2px, 0);
+    color: rgba(255, 0, 0, 0.8);
+}
+
+.product-image img {
+    display: block;
+    max-width: 228px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.shopping-cart {
+    position: fixed;
+    overflow: auto;
+    width: 420px;
+    height: 700px;
+    top: 0;
+    right: 0;
+    margin-right: 20px;
+    margin-top: 10px;
+    background: mistyrose;
+    box-sizing: border-box;
+    padding-bottom: 80px;
+}
+
+.shopping-cart-head {
+    background: salmon;
+    color: white;
+    padding: 5px;
+}
+
+.shopping-cart,
+.shopping-cart-head {
+    border-radius: 15px;
+}
+
+.shopping-cart-list {
+    list-style: none;
+}
+
+.list {
+    padding-top: 30px;
+    padding-bottom: 35px;
+}
+
+.button {
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    background: salmon;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.add-to-cart {
+    margin: 0 auto;
+}
+
+.empty-cart-btn {
+    align-self: center;
+    margin-bottom: 75px;
+    margin-right: 25px;
+    height: 40px;
+    width: 430px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.cart-checkout {
+    background: salmon;
+    margin-bottom: 2%;
+    margin-right: 25px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 430px;
+}
+
+.remove-item {
+    float: right;
+    margin-right: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cart-image img {
+    height: 100px;
+    width: 100px;
+    margin-left: -25px;
+    float: left;
+}
+
+@media screen and (min-width: 600px) {
+    .card {
+        flex: 1 1 calc(50% - 2rem);
+    }
+    .shopping-cart {
+        width: 29%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .card {
+        flex: 1 1 calc(33% - 2rem);
+    }
+}
