@@ -10,7 +10,7 @@ function shoppingCart() {
         emptyCart = document.querySelector(".empty-cart-btn"),
         cartCheckout = document.querySelector(".cart-checkout"),
         totalPrice = document.querySelector(".total-price");
-    //
+
     // Get JSON data from API
     jQuery.getJSON('https://api.myjson.com/bins/1925o6', function(data) {
         // Store JSON data in variable
