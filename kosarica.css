@@ -52,11 +52,11 @@ p {
     position: fixed;
     overflow: auto;
     width: 420px;
-    height: 700px;
+    height: 575px;
     top: 0;
     right: 0;
     margin-right: 20px;
-    margin-top: 10px;
+    margin-top: 25px;
     background: mistyrose;
     box-sizing: border-box;
     padding-bottom: 80px;
