@@ -66,6 +66,10 @@ p {
     background: salmon;
     color: white;
     padding: 5px;
+    position: fixed;
+    width: 430px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .shopping-cart,
@@ -115,6 +119,11 @@ p {
     bottom: 0;
     right: 0;
     width: 430px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .remove-item {
