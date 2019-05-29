@@ -51,8 +51,8 @@ p {
 .shopping-cart {
     position: fixed;
     overflow: auto;
-    width: 420px;
-    height: 575px;
+    width: 30%;
+    height: 80%;
     top: 0;
     right: 0;
     margin-right: 20px;
@@ -67,9 +67,9 @@ p {
     color: white;
     padding: 5px;
     position: fixed;
-    width: 430px;
+    width: 28.5%;
     margin-right: 5px;
-    margin-left: 5px;
+    margin-left: 4px;
 }
 
 .shopping-cart,
@@ -103,9 +103,9 @@ p {
 .empty-cart-btn {
     align-self: center;
     margin-bottom: 75px;
-    margin-right: 25px;
-    height: 40px;
-    width: 430px;
+    margin-right: 20px;
+    height: 5%;
+    width: 80%;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -114,11 +114,11 @@ p {
 .cart-checkout {
     background: salmon;
     margin-bottom: 2%;
-    margin-right: 25px;
+    margin-right: 20px;
     position: fixed;
     bottom: 0;
     right: 0;
-    width: 430px;
+    width: 80%;
     color: white;
     font-size: 20px;
     font-weight: bold;
@@ -142,17 +142,62 @@ a {
     float: left;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 400px) {
     .card {
-        flex: 1 1 calc(50% - 2rem);
+        width: 100%;
     }
-    .shopping-cart {
-        width: 29%;
+    #root {
+        width: 100%;
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 400px) and (max-width: 600px) {
+    .card {
+        width: 50%;
+    }
+    #root {
+        width: 80%;
+    }
+    .shopping-cart,
+    .empty-cart-btn,
+    .cart-checkout {
+        width: 29%;
+    }
+    .shopping-cart {
+        height: 80%;
+    }
+    .cart-checkout {
+        font-size: 10pt;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1350px) {
+    .card {
+        width: 30%;
+    }
+    #root {
+        width: 90%;
+    }
+    .shopping-cart,
+    .empty-cart-btn,
+    .cart-checkout {
+        width: 29%;
+    }
+    .shopping-cart {
+        height: 75%;
+    }
+    .cart-checkout {
+        font-size: 10pt;
+    }
+}
+
+@media screen and (min-width: 1350px) {
     .card {
         flex: 1 1 calc(33% - 2rem);
+    }
+    .shopping-cart,
+    .empty-cart-btn,
+    .cart-checkout {
+        width: 29%;
     }
 }
