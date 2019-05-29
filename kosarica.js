@@ -29,7 +29,7 @@ function shoppingCart() {
                                 <img src="${v.image}" alt="${v.name}">
                             </div>
                             <div class="product-name"> ${v.name}</div>
-                            <div class="product-price">${v.price.amount} ${v.price.currency + "/" + v.price.measureUnit}</div>
+                            <div class="product-price"><b>${v.price.amount} ${v.price.currency + "/" + v.price.measureUnit}</b></div>
                             <div class="product-add-to-cart">
                             <a href="#0" class="button add-to-cart" data-id=${v.id}>Dodaj</a>
                             </div>`;
@@ -128,6 +128,7 @@ function shoppingCart() {
         var calculateTotalPrice = function() {
             return productsInCart.reduce(function(total, item) {
                 return total + (item.product.price.amount * item.quantity);
+
             }, 0);
         }
         generateCartList();

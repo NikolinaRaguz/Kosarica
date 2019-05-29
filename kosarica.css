@@ -12,7 +12,7 @@ html {
 }
 
 #root {
-    max-width: 1050px;
+    max-width: 70%;
     margin: 1;
 }
 
@@ -51,30 +51,30 @@ p {
 .shopping-cart {
     position: fixed;
     overflow: auto;
-    width: 30%;
+    width: 29%;
     height: 80%;
     top: 0;
     right: 0;
     margin-right: 20px;
     margin-top: 25px;
-    background: mistyrose;
+    background: white;
     box-sizing: border-box;
     padding-bottom: 80px;
 }
 
 .shopping-cart-head {
-    background: salmon;
+    background: steelblue;
     color: white;
     padding: 5px;
     position: fixed;
-    width: 28.5%;
-    margin-right: 5px;
-    margin-left: 4px;
+    width: 29%;
+    margin-right: 0px;
+    margin-left: 0px;
 }
 
 .shopping-cart,
 .shopping-cart-head {
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .shopping-cart-list {
@@ -90,35 +90,41 @@ p {
     padding: 10px;
     border-radius: 5px;
     display: inline-block;
-    background: salmon;
+    background: steelblue;
     color: white;
     font-size: 12px;
     font-weight: bold;
 }
 
-.add-to-cart {
-    margin: 0 auto;
+.product-add-to-cart {
+    margin: auto;
+    width: 35%;
+    padding: 10px;
 }
 
 .empty-cart-btn {
-    align-self: center;
+    text-align: center;
+    padding: 5px;
     margin-bottom: 75px;
     margin-right: 20px;
     height: 5%;
-    width: 80%;
+    width: 29%;
     position: fixed;
     bottom: 0;
     right: 0;
+    border-style: solid;
+    border-color: black;
+    font-size: 15px;
 }
 
 .cart-checkout {
-    background: salmon;
+    background: skyblue;
     margin-bottom: 2%;
     margin-right: 20px;
     position: fixed;
     bottom: 0;
     right: 0;
-    width: 80%;
+    width: 29%;
     color: white;
     font-size: 20px;
     font-weight: bold;
@@ -136,8 +142,8 @@ a {
 }
 
 .cart-image img {
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     margin-left: -25px;
     float: left;
 }
@@ -146,14 +152,20 @@ a {
     .card {
         width: 100%;
     }
+    .product-name {
+        font-size: 9pt;
+    }
     #root {
         width: 100%;
     }
 }
 
-@media screen and (min-width: 400px) and (max-width: 600px) {
+@media screen and (min-width: 400px) and (max-width: 900px) {
     .card {
-        width: 50%;
+        width: 30%;
+    }
+    .product-name {
+        font-size: 10pt;
     }
     #root {
         width: 80%;
@@ -161,19 +173,19 @@ a {
     .shopping-cart,
     .empty-cart-btn,
     .cart-checkout {
-        width: 29%;
-    }
-    .shopping-cart {
-        height: 80%;
+        width: 35%;
     }
     .cart-checkout {
         font-size: 10pt;
     }
 }
 
-@media screen and (min-width: 600px) and (max-width: 1350px) {
+@media screen and (min-width: 900px) and (max-width: 1350px) {
     .card {
-        width: 30%;
+        width: 40%;
+    }
+    .product-name {
+        font-size: 12pt;
     }
     #root {
         width: 90%;
@@ -181,10 +193,7 @@ a {
     .shopping-cart,
     .empty-cart-btn,
     .cart-checkout {
-        width: 29%;
-    }
-    .shopping-cart {
-        height: 75%;
+        width: 35%;
     }
     .cart-checkout {
         font-size: 10pt;
@@ -194,10 +203,5 @@ a {
 @media screen and (min-width: 1350px) {
     .card {
         flex: 1 1 calc(33% - 2rem);
-    }
-    .shopping-cart,
-    .empty-cart-btn,
-    .cart-checkout {
-        width: 29%;
     }
 }
